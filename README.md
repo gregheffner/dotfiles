@@ -21,7 +21,6 @@
 - **Shell**: zsh (omz)
 - **Terminal**: iTerm2
 - **Font**: Hack Nerd Font (Patched)
-Followed https://www.atlassian.com/git/tutorials/dotfiles for most of this.
 
 <a name="firsttime"></a>
 
@@ -81,3 +80,5 @@ config push
 - `Brewfile`: manages packages installed by Homebrew
 
 Thanks to BaDxKaRMa for all the help on this. 
+
+Followed https://www.atlassian.com/git/tutorials/dotfiles for most of this.

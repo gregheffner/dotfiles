@@ -79,6 +79,6 @@ config push
 - `.zshrc`: main configuration file for the Zsh shell
 - `Brewfile`: manages packages installed by Homebrew
 
-Thanks to [BaDxKaRMa](#https://github.com/BaDxKaRMa) for all the help on this. 
+Thanks to BaDxKaRMa for all the help on this. https://github.com/BaDxKaRMa
 
 Followed https://www.atlassian.com/git/tutorials/dotfiles for most of this.

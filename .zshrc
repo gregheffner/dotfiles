@@ -69,4 +69,3 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;}
 alias config='/usr/bin/git --git-dir=/Users/Greg/.cfg/ --work-tree=/Users/Greg'
-alias config='/usr/bin/git --git-dir=/Users/Greg/.cfg/ --work-tree=/Users/Greg'

@@ -1,5 +1,5 @@
 <div align="center">
-    <h1>config files with the Drip💧</h1>
+    <h1>Config files with the Drip💧</h1>
 
 ![macOS](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=macos&logoColor=F0F0F0)
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)

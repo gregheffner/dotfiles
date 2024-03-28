@@ -10,11 +10,8 @@
 ## Contents
 
 1. [Details](#details)
-1. [Dependencies](#dependencies)
-1. [First Time Setup](#firsttime)
 1. [Deploy](#deploy)
 1. [Folder Structure](#folderStructure)
-1. [Notes](#notes)
 
 <a name="details"></a>
 

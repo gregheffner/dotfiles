@@ -54,6 +54,40 @@ alias lla='ls -la'
 alias lt='ls --tree'
 alias l='ls -l'
 
+tunnelinfo() {
+  RED='\033[0;31m'
+  GREEN='\033[0;32m'
+  YELLOW='\033[0;33m'
+  BLUE='\033[0;34m'
+  MAGENTA='\033[0;35m'
+  WHITE='\033[0;37m'
+  NC='\033[0m' # No Color
+
+  cloudflared tunnel list | awk 'NR>2 {print $1}' | while read id; do
+    echo -e "${RED}===== Tunnel ID: ${GREEN}$id${RED} =====${NC}"
+    cloudflared tunnel info "$id" | while IFS= read -r line; do
+      case "$line" in
+        NAME:*)      echo -e "${WHITE}$line${NC}" ;;
+        ID:*)        echo -e "${GREEN}$line${NC}" ;;
+        CREATED:*)   echo -e "${GREEN}$line${NC}" ;;
+        "CONNECTOR ID"*)
+          echo -e "${WHITE}$line${NC}" ;;
+        [a-f0-9]*\ *Z*)
+          connector_id=$(echo "$line" | awk '{print $1}')
+          created=$(echo "$line" | awk '{print $2}')
+          arch=$(echo "$line" | awk '{print $3}')
+          version=$(echo "$line" | awk '{print $4}')
+          origin_ip=$(echo "$line" | awk '{print $5}')
+          edge=$(echo "$line" | cut -d' ' -f6-)
+          echo -e "${YELLOW}${connector_id} ${BLUE}${created} ${WHITE}${arch} ${WHITE}${version} ${BLUE}${origin_ip} ${MAGENTA}${edge}${NC}"
+          ;;
+        *) echo -e "${WHITE}$line${NC}" ;;
+      esac
+    done
+    echo
+  done
+}
+
 eval "$(pyenv init -)"
 eval "$(op completion zsh)"; compdef _op op
 eval $(thefuck --alias)

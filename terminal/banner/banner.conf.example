@@ -1,0 +1,18 @@
+# Copy to ~/.banner.conf and make it yours. Read by both banner-mac.sh and banner-linux.sh. Never committed.
+# Full walkthrough: https://github.com/gregheffner/dotfiles#make-it-yours
+BANNER_EXAMPLE=1                     # delete this line once you have edited the file; it prints the reminder
+TITLE="My Terminal"                  # figlet title (install.sh sets this to the name you gave it)
+SUBTITLE=""                          # optional second figlet line (linux script)
+FUNCTION="Main PC"
+HOMEPAGE="https://example.com"
+VAULT=""                             # Obsidian vault name, for the obsidian:// link
+PASSPORT=""                          # path to a local HTML network map, if you keep one
+BASTION=""                           # ssh host alias to health-check at login; empty to skip
+# "text::url::description" gets its own line; "text::url" is grouped onto one row
+LINKS=("Dashboard::http://192.0.2.10:3001::your status page" "Router::https://192.0.2.1" "NAS::https://192.0.2.11")
+# "command::description" — only shown if the first word resolves (binary, alias or ssh host)
+CMDS=("k9s::cluster TUI" "gping <host>::ping TUI")
+# free-text lines at the bottom: your edge, firewall, DNS, agents
+STACK=("Edge: <your CDN / WAF>" "Firewall: <your firewall>" "DNS: <your resolver>")
+# label known egress IPs so the WAN line says where you are leaving from
+#WAN_TAGS=("203.0.113.5::home" "198.51.100.9::vpn")   # leave commented until you know your addresses

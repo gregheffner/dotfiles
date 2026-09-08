@@ -7,6 +7,14 @@
 
 </div>
 
+## Terminal setup in one command
+
+Same zsh prompt, palette, font and login banner on a fresh Ubuntu or Mac. See [`terminal/`](terminal/) for details.
+
+```
+git clone https://github.com/gregheffner/dotfiles ~/dotfiles && ~/dotfiles/terminal/install.sh
+```
+
 ## Contents
 
 1. [Details](#details)

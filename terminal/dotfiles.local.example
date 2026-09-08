@@ -1,0 +1,9 @@
+# Copy to ~/.dotfiles.local and edit. Sourced by .zshrc; never committed.
+# --- jump hosts
+alias 2jump='ssh bastion'
+# --- devices whose SSH key lives only in 1Password (see opssh in .zshrc)
+export OPSSH_VAULT="SSH KEYS"
+# alias nas='opssh nas-item admin@192.0.2.10'
+# alias router='opssh router-item root@192.0.2.1'
+# --- wrap a tool with a secret injected from 1Password at call time
+# mytool() { export MYTOOL_TOKEN="$(op read 'op://Vault/Item/credential')"; command mytool "$@"; }

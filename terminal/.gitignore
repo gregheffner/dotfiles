@@ -1,0 +1,4 @@
+.dotfiles.local
+.banner.conf
+*.pre-dotfiles
+.DS_Store
